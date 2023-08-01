@@ -10,3 +10,4 @@ router.patch('/', studentController.updateStudent)
 router.patch('/', studentController.insertStudent)
 
 export default router
+
