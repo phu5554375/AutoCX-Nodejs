@@ -30,7 +30,7 @@ async function getStudentById(req, res) {
     
 }
 async function updateStudent(req, res) {
-    
+
 }
 async function insertStudent(req, res) {
     try {
@@ -41,7 +41,7 @@ async function insertStudent(req, res) {
         })
     } catch (exception) {
         res.status(HttpStatusCode.INSERT_SERVER_ERROR).json({
-            message: "Cannot insert student:"+error
+            message: "Cannot insert student:"+ exception
         })
     }
     

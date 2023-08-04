@@ -8,8 +8,9 @@ export default class Exception extends Error {
     static WRONG_EMAIL_PASSWORD ="Wrong email of password"
 
 
-    constructor(message) {
-        super(message) //call constuctor of parent class(Error)
+    constructor(message, validateErrors={}) {
+        super(`message${Object.keys(validateErrors).lenght > 0 ? 
+            JSON.stringify(validateErrors): ''}`) //call constuctor of parent class(Error)
         print(message, OutputType.ERROR)
     }
 }
